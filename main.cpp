@@ -1,16 +1,20 @@
    #include <iostream>
-   #include <windows.h>  //  Pentru a putea apela Sleep()
 
    using namespace std;
 
    int main(){
-       int a[20], i;
-    for (i = 0; i < 20; i++) {
-      a[i] = i + 1;
-   }
-    for (i = 0; i < 20; i++) {
-      cout << "a[" << i << "]=" << a[i] << endl;
-   }
-      cout << endl;
+       int a[5], nr, i; //int a[] = {1, -3, 6, 7, -12, -4, 2, 9} ha igy teszem nem kell beirni;
+       cout << "Cate elemente sa aiba sirul? " << endl;
+       cin >> nr;
+       for (i=0; i<nr; i++) {
+        cout << "a[" << i << "]=";
+        cin >> a[i]; //eloszor kiiratja az eredeti sorozatot
+       }
+       for (i=0; i<nr; i++) {
+        if( a[i] < 0)
+            a[i] = -a[i];
+            cout << a[i] << ", ";
+       }
+       cout << endl;
       return 0;
    }
