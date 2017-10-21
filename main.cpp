@@ -4,10 +4,13 @@
    using namespace std;
 
    int main(){
-      for (int i = 10; i > 0; i--) {
-         cout << i << endl;
-         Sleep(1000);         // Temporizare 1s
-      }
-      cout << "Racheta lansata." << endl;
+       int a[20], i;
+    for (i = 0; i < 20; i++) {
+      a[i] = i + 1;
+   }
+    for (i = 0; i < 20; i++) {
+      cout << "a[" << i << "]=" << a[i] << endl;
+   }
+      cout << endl;
       return 0;
    }
